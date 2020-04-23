@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.495" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\DespreNoi.xaml.cs">
+      <DependentUpon>DespreNoi.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\AdaugaOrasFavorit.xaml.cs">
+      <DependentUpon>AdaugaOrasFavorit.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\VremeOrasFavorit.xaml.cs">
+      <DependentUpon>VremeOrasFavorit.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ListaOraseFavorite.xaml.cs">
+      <DependentUpon>ListaOraseFavorite.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\PrognozaOrasFavorit.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Tutorial.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
